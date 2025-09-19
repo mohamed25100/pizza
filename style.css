@@ -1,0 +1,67 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #fffaf0;
+    color: #333;
+}
+
+header {
+    background: #d62828;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-style: italic;
+}
+
+.menu {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.menu h2 {
+    text-align: center;
+    color: #d62828;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.pizza-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.pizza {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.pizza:hover {
+    transform: scale(1.05);
+}
+
+.pizza h3 {
+    margin-top: 0;
+    color: #d62828;
+}
+
+footer {
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
