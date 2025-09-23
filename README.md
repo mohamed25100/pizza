@@ -43,3 +43,6 @@ Mohamed BOUCHERBA
 
 # pour tester le code html
 [https://jsbin.com/?html,output](https://jsbin.com/?html,output)
+
+# codewars 
+[https://www.codewars.com/users/BOUCHERBA/badges/large](https://www.codewars.com/users/BOUCHERBA/badges/large)
