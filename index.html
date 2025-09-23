@@ -1,98 +1,169 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pizzeria - Nos Pizzas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pizzeria — Template attractif</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent: #ff5a2b;
+      --muted: #f1efe9;
+      --card: rgba(255,255,255,0.95);
+      --shadow: 0 12px 36px rgba(0,0,0,0.28);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Nunito",sans-serif;
+      background-image:url('https://picsum.photos/1600/900?blur=3&seed=pizza-bg');
+      background-size:cover;
+      background-attachment:fixed;
+      color:#111;
+    }
+    .page-overlay{background:rgba(0,0,0,0.55);min-height:100vh}
+    header{max-width:1200px;margin:0 auto;padding:24px 6%;display:flex;justify-content:space-between;align-items:center;color:white}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo-circle{width:56px;height:56px;border-radius:50%;background:url('https://picsum.photos/200/200?seed=logo-pizza') center/cover;border:2px solid rgba(255,255,255,0.2)}
+    nav a{color:white;margin-left:18px;text-decoration:none;font-weight:700}
+    .hero{max-width:1200px;margin:20px auto;padding:28px 6%;display:grid;grid-template-columns:1fr 400px;gap:28px;color:white}
+    .hero h2{font-size:36px;margin:0}
+    .btn{padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff7a4d);color:white}
+    .hero-right{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+    .hero-right img{width:100%;height:100%;object-fit:cover}
+    .hero-card{position:absolute;bottom:10px;left:10px;background:rgba(255,255,255,0.9);padding:10px;border-radius:10px;display:flex;gap:10px;align-items:center;width:calc(100% - 20px)}
+    .hero-card img{width:60px;height:60px;border-radius:8px;object-fit:cover}
+    .container{max-width:1200px;margin:30px auto;padding:0 6%}
+    .section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;color:white}
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .card-body{padding:14px}
+    .card h4{margin:0 0 8px 0}
+    .price-line{display:flex;justify-content:space-between;margin-top:8px}
+    .price{font-weight:900;color:var(--accent)}
+    footer{max-width:1200px;margin:30px auto;padding:20px 6%;background:rgba(255,255,255,0.05);border-radius:12px;color:white}
+  </style>
 </head>
-
 <body>
+  <div class="page-overlay">
     <header>
-        <h1>🍕 Bienvenue à la Pizzeria</h1>
-        <p>Découvrez nos délicieuses pizzas faites maison !</p>
+      <div class="brand">
+        <div class="logo-circle"></div>
+        <div>
+          <h1 id="brand-name"></h1>
+          <p id="brand-slogan"></p>
+        </div>
+      </div>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+        <a href="#order">Commander</a>
+      </nav>
     </header>
 
-    <main>
-        <section class="menu">
-            <h2>Nos Pizzas</h2>
-            <div class="pizza-list">
-                <div class="pizza">
-                    <h3>Pizza Fromages</h3>
-                    <p>Normal : 8€ | Mega : 12€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Viande Hachée</h3>
-                    <p>Normal : 9€ | Mega : 13€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Thon</h3>
-                    <p>Normal : 9€ | Mega : 13€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Champignons</h3>
-                    <p>Normal : 8€ | Mega : 12€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Anchois</h3>
-                    <p>Normal : 9€ | Mega : 13€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Poulet</h3>
-                    <p>Normal : 9€ | Mega : 14€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Viande Hachée Champignons</h3>
-                    <p>Normal : 10€ | Mega : 15€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Thon Champignons</h3>
-                    <p>Normal : 10€ | Mega : 15€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Crème Fraîche Cheddar</h3>
-                    <p>Normal : 11€ | Mega : 16€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Royal</h3>
-                    <p>Normal : 12€ | Mega : 17€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Végétarienne</h3>
-                    <p>Normal : 9€ | Mega : 14€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Trois Fromages</h3>
-                    <p>Normal : 10€ | Mega : 15€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Thon Champignons Viande Hachée</h3>
-                    <p>Normal : 12€ | Mega : 18€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Spécial du Chef</h3>
-                    <p>Normal : 13€ | Mega : 19€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Quatre Fromages</h3>
-                    <p>Normal : 11€ | Mega : 16€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Quatre Saisons</h3>
-                    <p>Normal : 12€ | Mega : 17€</p>
-                </div>
-                <div class="pizza">
-                    <h3>Pizza Fruits de Mer</h3>
-                    <p>Normal : 14€ | Mega : 20€</p>
-                </div>
-            </div>
-        </section>
+    <section class="hero">
+      <div>
+        <h2 id="hero-title"></h2>
+        <p id="hero-desc"></p>
+        <a class="btn btn-primary" href="#menu">Voir le menu</a>
+      </div>
+      <div class="hero-right">
+        <img id="hero-img" alt="">
+        <div class="hero-card">
+          <img id="hero-card-img" alt="">
+          <div>
+            <div id="hero-card-title" style="font-weight:700;color:#222"></div>
+            <div id="hero-card-desc" style="color:#555"></div>
+          </div>
+          <div id="hero-card-price" style="margin-left:auto;font-weight:900;color:var(--accent)"></div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container" id="menu">
+      <div class="section-title">
+        <h3>Nos pizzas</h3>
+        <div>Normal & Mega disponibles</div>
+      </div>
+      <section id="menu-grid" class="menu-grid"></section>
     </main>
 
-    <footer>
-        <p>© 2025 Pizzeria - Tous droits réservés - Mohamed BOUCHERBA</p>
+    <footer id="contact">
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong id="footer-brand"></strong>
+          <div id="footer-contact"></div>
+        </div>
+        <div id="footer-hours"></div>
+        <a id="footer-phone-btn" class="btn btn-primary">Appeler</a>
+      </div>
     </footer>
-</body>
+  </div>
 
+  <script>
+    const INFO = {
+      brand: "Pizza Bazine",
+      slogan: "le • goût • unique",
+      hero: {
+        title: "Pizzeria Bazine el ancrer el ghedrane",
+        desc: "Ingrédients frais, pâte maison et cuisson au feu de bois.",
+        img: "https://picsum.photos/640/420?seed=pizza-hero",
+        card: {
+          title: "Pizza Fruits de Mer",
+          desc: "Mega",
+          img: "https://picsum.photos/120/120?seed=pizza-thumb1",
+          price: "2800 DA"
+        }
+      },
+      pizzas: [
+        { name: "Pizza Fromages", normal: "250 DA", mega: "650 DA", img:"https://picsum.photos/800/600?seed=p1"},
+        { name: "Pizza Viande Hachée", normal: "350 DA", mega: "900 DA", img:"https://picsum.photos/800/600?seed=p2"},
+        { name: "Pizza Thon", normal: "350 DA", mega: "900 DA", img:"https://picsum.photos/800/600?seed=p3"},
+        { name: "Pizza Champignons", normal: "350 DA", mega: "900 DA", img:"https://picsum.photos/800/600?seed=p4"},
+        { name: "Pizza Anchois", normal: "1100 DA", mega: "400 DA", img:"https://picsum.photos/800/600?seed=p5"},
+        { name: "Pizza Poulet", normal: "1100 DA", mega: "400 DA", img:"https://picsum.photos/800/600?seed=p6"},
+        { name: "Pizza Royal", normal: "800 DA", mega: "2100 DA", img:"https://picsum.photos/800/600?seed=p7"},
+        { name: "Pizza Fruits de Mer", normal: "1200 DA", mega: "2800 DA", img:"https://picsum.photos/800/600?seed=p8"}
+      ],
+      contact: {
+        phone: "+33123456789",
+        text: "Tel: 01 23 45 67 89 • 12 Rue de la Pizza, Paris",
+        hours: "Horaires: 11:00 – 23:00"
+      }
+    };
+
+    // Injections
+    document.getElementById("brand-name").textContent = INFO.brand;
+    document.getElementById("brand-slogan").textContent = INFO.slogan;
+    document.getElementById("hero-title").textContent = INFO.hero.title;
+    document.getElementById("hero-desc").textContent = INFO.hero.desc;
+    document.getElementById("hero-img").src = INFO.hero.img;
+    document.getElementById("hero-card-img").src = INFO.hero.card.img;
+    document.getElementById("hero-card-title").textContent = INFO.hero.card.title;
+    document.getElementById("hero-card-desc").textContent = INFO.hero.card.desc;
+    document.getElementById("hero-card-price").textContent = INFO.hero.card.price;
+
+    const menuGrid = document.getElementById("menu-grid");
+    INFO.pizzas.forEach(pizza => {
+      const card = document.createElement("article");
+      card.className = "card";
+      card.innerHTML = `
+        <img src="${pizza.img}" alt="${pizza.name}">
+        <div class="card-body">
+          <h4>${pizza.name}</h4>
+          <div class="price-line"><span>Normal :</span><span class="price">${pizza.normal}</span></div>
+          <div class="price-line"><span>Mega :</span><span class="price">${pizza.mega}</span></div>
+        </div>
+      `;
+      menuGrid.appendChild(card);
+    });
+
+    document.getElementById("footer-brand").textContent = INFO.brand;
+    document.getElementById("footer-contact").textContent = INFO.contact.text;
+    document.getElementById("footer-hours").textContent = INFO.contact.hours;
+    document.getElementById("footer-phone-btn").href = "tel:" + INFO.contact.phone;
+  </script>
+</body>
 </html>
