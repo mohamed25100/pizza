@@ -40,3 +40,6 @@ Mohamed BOUCHERBA
 
 # trello.com
 [Visiter mon trello! (private)](https://trello.com/invite/b/68cbafde1e013f89a9d3f6a4/ATTI77742a5bd4dab77041303fcd3012bcfe7670B1A3/pizza)
+
+# pour tester le code html
+[https://jsbin.com/?html,output](https://jsbin.com/?html,output)
